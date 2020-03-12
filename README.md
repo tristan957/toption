@@ -1,3 +1,8 @@
+| Platform | Status                                                                                                                                  |
+| -------- | --------------------------------------------------------------------------------------------------------------------------------------- |
+| Alpine   | [![builds.sr.ht status](https://builds.sr.ht/~tristan957/toption/alpine.yml.svg)](https://builds.sr.ht/~tristan957/toption/alpine.yml?) |
+| Fedora   | [![builds.sr.ht status](https://builds.sr.ht/~tristan957/toption/fedora.yml.svg)](https://builds.sr.ht/~tristan957/toption/fedora.yml?) |
+
 # TOption
 
 GLib lacks a good way to represent an optional type, so this library provides
@@ -21,3 +26,5 @@ main(int argc, const char ** argv)
     return 0;
 }
 ```
+
+`TOption supports a variety of

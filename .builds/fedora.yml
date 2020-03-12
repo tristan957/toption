@@ -1,7 +1,7 @@
 image: fedora/31
 packages:
   - meson
-  - glib-devel
+  - glib2-devel
 sources:
   - https://git.sr.ht/~tristan957/toption
 tasks:
