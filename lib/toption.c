@@ -111,7 +111,7 @@ out:
 }
 
 TOption *
-t_option_from_boolean(const gboolean value)
+t_option_from_boolean(gboolean value)
 {
 	TOption *self = g_try_new0(TOption, 1);
 	if (!self)
@@ -126,7 +126,7 @@ out:
 }
 
 TOption *
-t_option_from_char(const gchar value)
+t_option_from_char(gchar value)
 {
 	TOption *self = g_try_new0(TOption, 1);
 	if (!self)
@@ -141,7 +141,7 @@ out:
 }
 
 TOption *
-t_option_from_uchar(const guchar value)
+t_option_from_uchar(guchar value)
 {
 	TOption *self = g_try_new0(TOption, 1);
 	if (!self)
@@ -156,7 +156,7 @@ out:
 }
 
 TOption *
-t_option_from_string(const gchararray value)
+t_option_from_string(gchararray value)
 {
 	TOption *self = g_try_new0(TOption, 1);
 	if (!self)
@@ -171,7 +171,7 @@ out:
 }
 
 TOption *
-t_option_from_int(const gint value)
+t_option_from_int(gint value)
 {
 	TOption *self = g_try_new0(TOption, 1);
 	if (!self)
@@ -186,7 +186,7 @@ out:
 }
 
 TOption *
-t_option_from_int64(const gint64 value)
+t_option_from_int64(gint64 value)
 {
 	TOption *self = g_try_new0(TOption, 1);
 	if (!self)
@@ -201,7 +201,7 @@ out:
 }
 
 TOption *
-t_option_from_uint(const guint value)
+t_option_from_uint(guint value)
 {
 	TOption *self = g_try_new0(TOption, 1);
 	if (!self)
@@ -216,7 +216,7 @@ out:
 }
 
 TOption *
-t_option_from_uint64(const guint64 value)
+t_option_from_uint64(guint64 value)
 {
 	TOption *self = g_try_new0(TOption, 1);
 	if (!self)
@@ -231,7 +231,7 @@ out:
 }
 
 TOption *
-t_option_from_float(const gfloat value)
+t_option_from_float(gfloat value)
 {
 	TOption *self = g_try_new0(TOption, 1);
 	if (!self)
@@ -246,7 +246,7 @@ out:
 }
 
 TOption *
-t_option_from_double(const gdouble value)
+t_option_from_double(gdouble value)
 {
 	TOption *self = g_try_new0(TOption, 1);
 	if (!self)
@@ -261,7 +261,7 @@ out:
 }
 
 TOption *
-t_option_from_pointer(const gpointer value)
+t_option_from_pointer(gpointer value)
 {
 	TOption *self = g_try_new0(TOption, 1);
 	if (!self)
