@@ -16,7 +16,7 @@ an optional type to use in conjunction with GLib.
 #include <toption/toption.h>
 
 int
-main(int argc, const char ** argv)
+main(int argc, const char **argv)
 {
     int my_value = 64;
     TOption *opt = t_option_from(opt);
