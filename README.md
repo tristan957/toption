@@ -19,9 +19,15 @@ int
 main(int argc, const char **argv)
 {
     int my_value = 64;
-    TOption *opt = t_option_from(opt);
-    const int the_value = t_option_get_int(opt);
+    TOption *opt1 = t_option_from(opt);
+    const int the_value = t_option_get_int(opt1);
     assert(the_value == my_value);
+
+    TOption *opt2 = my_func();
+    if (t_option_is_none(opt2))
+        // stuff
+    else
+        // other stuff
 
     return 0;
 }
