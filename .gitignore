@@ -1,0 +1,12 @@
+# User files
+.buildconfig
+.clangd
+.exrc
+.env
+.vscode/
+build
+compile_commands.json
+
+# Don't ignore wraps
+subprojects/*
+!subprojects/*.wrap

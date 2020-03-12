@@ -1,0 +1,16 @@
+image: fedora/31
+packages:
+  - meson
+  - glib-devel
+sources:
+  - https://git.sr.ht/~tristan957/toption
+tasks:
+  - setup: |
+      cd toption
+      CC=gcc meson -Dwerror=true -Dbuildtype=release -Dwarning_level=2 build
+  - build: |
+      cd toption
+      ninja -C build
+  - test: |
+      cd toption
+      ninja -C build test
