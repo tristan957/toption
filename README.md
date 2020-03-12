@@ -27,4 +27,17 @@ main(int argc, const char ** argv)
 }
 ```
 
-`TOption supports a variety of
+`TOption` supports a variety of types:
+
+* `gboolean`
+* `gchar`
+* `guchar`
+* `gchararray`
+* `gint`
+* `gint64`
+* `glong`
+* `guint`
+* `guint64`
+* `gfloat`
+* `gdouble`
+* `gpointer`
