@@ -8,9 +8,9 @@
 static void
 test_boolean()
 {
-	gboolean v		 = TRUE;
-	TOption *t		 = t_option_from(v);
-	const gboolean n = t_option_get_boolean(t);
+	gboolean v			 = TRUE;
+	g_autoptr(TOption) t = t_option_from(v);
+	const gboolean n	 = t_option_get_boolean(t);
 
 	g_assert_true(t && n);
 }
@@ -18,9 +18,9 @@ test_boolean()
 static void
 test_char()
 {
-	gchar v		= TEST_NUMBER;
-	TOption *t	= t_option_from(v);
-	const int n = t_option_get_char(t);
+	gchar v				 = TEST_NUMBER;
+	g_autoptr(TOption) t = t_option_from(v);
+	const int n			 = t_option_get_char(t);
 
 	g_assert_true(t && n == v);
 }
@@ -28,9 +28,9 @@ test_char()
 static void
 test_uchar()
 {
-	guchar v	   = TRUE;
-	TOption *t	   = t_option_from(v);
-	const guchar n = t_option_get_uchar(t);
+	guchar v			 = TRUE;
+	g_autoptr(TOption) t = t_option_from(v);
+	const guchar n		 = t_option_get_uchar(t);
 
 	g_assert_true(t && n == v);
 }
@@ -38,9 +38,9 @@ test_uchar()
 static void
 test_string()
 {
-	gchararray v	   = TEST_STRING;
-	TOption *t		   = t_option_from(v);
-	const gchararray n = t_option_get_string(t);
+	gchararray v		 = TEST_STRING;
+	g_autoptr(TOption) t = t_option_from(v);
+	const gchararray n	 = t_option_get_string(t);
 
 	g_assert_true(t && n == v);
 }
@@ -48,9 +48,9 @@ test_string()
 static void
 test_int()
 {
-	gint v		 = TEST_NUMBER;
-	TOption *t	 = t_option_from(v);
-	const gint n = t_option_get_int(t);
+	gint v				 = TEST_NUMBER;
+	g_autoptr(TOption) t = t_option_from(v);
+	const gint n		 = t_option_get_int(t);
 
 	g_assert_true(t && n == v);
 }
@@ -58,9 +58,9 @@ test_int()
 static void
 test_int64()
 {
-	guint64 v		= TEST_NUMBER;
-	TOption *t		= t_option_from(v);
-	const guint64 n = t_option_get_uint64(t);
+	guint64 v			 = TEST_NUMBER;
+	g_autoptr(TOption) t = t_option_from(v);
+	const guint64 n		 = t_option_get_uint64(t);
 
 	g_assert_true(t && n == v);
 }
@@ -68,9 +68,9 @@ test_int64()
 static void
 test_uint()
 {
-	guint v		  = TEST_NUMBER;
-	TOption *t	  = t_option_from(v);
-	const guint n = t_option_get_uint(t);
+	guint v				 = TEST_NUMBER;
+	g_autoptr(TOption) t = t_option_from(v);
+	const guint n		 = t_option_get_uint(t);
 
 	g_assert_true(t && n == v);
 }
@@ -78,9 +78,9 @@ test_uint()
 static void
 test_uint64()
 {
-	guint64 v		= TEST_NUMBER;
-	TOption *t		= t_option_from(v);
-	const guint64 n = t_option_get_uint64(t);
+	guint64 v			 = TEST_NUMBER;
+	g_autoptr(TOption) t = t_option_from(v);
+	const guint64 n		 = t_option_get_uint64(t);
 
 	g_assert_true(t && n == v);
 }
@@ -88,9 +88,9 @@ test_uint64()
 static void
 test_float()
 {
-	gfloat v	   = TEST_NUMBER;
-	TOption *t	   = t_option_from(v);
-	const gfloat n = t_option_get_float(t);
+	gfloat v			 = TEST_NUMBER;
+	g_autoptr(TOption) t = t_option_from(v);
+	const gfloat n		 = t_option_get_float(t);
 
 	g_assert_true(t && n == TEST_NUMBER);
 }
@@ -98,9 +98,9 @@ test_float()
 static void
 test_double()
 {
-	gdouble v		= TEST_NUMBER;
-	TOption *t		= t_option_from(v);
-	const gdouble n = t_option_get_double(t);
+	gdouble v			 = TEST_NUMBER;
+	g_autoptr(TOption) t = t_option_from(v);
+	const gdouble n		 = t_option_get_double(t);
 
 	g_assert_true(t && n == TEST_NUMBER);
 }
@@ -108,9 +108,9 @@ test_double()
 static void
 test_pointer()
 {
-	gpointer v		= &test_pointer;
-	TOption *t		= t_option_from(v);
-	gconstpointer n = t_option_get_pointer(t);
+	gpointer v			 = &test_pointer;
+	g_autoptr(TOption) t = t_option_from(v);
+	gconstpointer n		 = t_option_get_pointer(t);
 
 	g_assert_true(t && n == test_pointer);
 }

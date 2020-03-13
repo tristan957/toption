@@ -58,4 +58,7 @@ gfloat t_option_get_float(TOption *self);
 gdouble t_option_get_double(TOption *self);
 gpointer t_option_get_pointer(TOption *self);
 
+G_DEFINE_BOXED_TYPE(TOption, t_option, t_option_ref, t_option_unref)
+G_DEFINE_AUTOPTR_CLEANUP_FUNC(TOption, t_option_unref)
+
 G_END_DECLS

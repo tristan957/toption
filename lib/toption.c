@@ -28,8 +28,6 @@ struct _TOption
 	volatile gint ref_count;
 };
 
-G_DEFINE_BOXED_TYPE(TOption, t_option, t_option_ref, t_option_unref)
-
 TOption *
 t_option_ref(TOption *self)
 {
@@ -99,7 +97,7 @@ t_option_contains(TOption *self, const GType type)
 TOption *
 t_option_none()
 {
-	TOption *self = g_try_new0(TOption, 1);
+	TOption *self = g_slice_alloc0(sizeof(TOption));
 	if (!self)
 		goto out;
 
@@ -113,7 +111,7 @@ out:
 TOption *
 t_option_from_boolean(gboolean value)
 {
-	TOption *self = g_try_new0(TOption, 1);
+	TOption *self = g_slice_alloc0(sizeof(TOption));
 	if (!self)
 		goto out;
 
@@ -128,7 +126,7 @@ out:
 TOption *
 t_option_from_char(gchar value)
 {
-	TOption *self = g_try_new0(TOption, 1);
+	TOption *self = g_slice_alloc0(sizeof(TOption));
 	if (!self)
 		goto out;
 
@@ -143,7 +141,7 @@ out:
 TOption *
 t_option_from_uchar(guchar value)
 {
-	TOption *self = g_try_new0(TOption, 1);
+	TOption *self = g_slice_alloc0(sizeof(TOption));
 	if (!self)
 		goto out;
 
@@ -158,7 +156,7 @@ out:
 TOption *
 t_option_from_string(gchararray value)
 {
-	TOption *self = g_try_new0(TOption, 1);
+	TOption *self = g_slice_alloc0(sizeof(TOption));
 	if (!self)
 		goto out;
 
@@ -173,7 +171,7 @@ out:
 TOption *
 t_option_from_int(gint value)
 {
-	TOption *self = g_try_new0(TOption, 1);
+	TOption *self = g_slice_alloc0(sizeof(TOption));
 	if (!self)
 		goto out;
 
@@ -188,7 +186,7 @@ out:
 TOption *
 t_option_from_int64(gint64 value)
 {
-	TOption *self = g_try_new0(TOption, 1);
+	TOption *self = g_slice_alloc0(sizeof(TOption));
 	if (!self)
 		goto out;
 
@@ -203,7 +201,7 @@ out:
 TOption *
 t_option_from_uint(guint value)
 {
-	TOption *self = g_try_new0(TOption, 1);
+	TOption *self = g_slice_alloc0(sizeof(TOption));
 	if (!self)
 		goto out;
 
@@ -218,7 +216,7 @@ out:
 TOption *
 t_option_from_uint64(guint64 value)
 {
-	TOption *self = g_try_new0(TOption, 1);
+	TOption *self = g_slice_alloc0(sizeof(TOption));
 	if (!self)
 		goto out;
 
@@ -233,7 +231,7 @@ out:
 TOption *
 t_option_from_float(gfloat value)
 {
-	TOption *self = g_try_new0(TOption, 1);
+	TOption *self = g_slice_alloc0(sizeof(TOption));
 	if (!self)
 		goto out;
 
@@ -248,7 +246,7 @@ out:
 TOption *
 t_option_from_double(gdouble value)
 {
-	TOption *self = g_try_new0(TOption, 1);
+	TOption *self = g_slice_alloc0(sizeof(TOption));
 	if (!self)
 		goto out;
 
@@ -263,7 +261,7 @@ out:
 TOption *
 t_option_from_pointer(gpointer value)
 {
-	TOption *self = g_try_new0(TOption, 1);
+	TOption *self = g_slice_alloc0(sizeof(TOption));
 	if (!self)
 		goto out;
 

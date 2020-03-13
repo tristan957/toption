@@ -1,4 +1,4 @@
 option('tests', type: 'boolean', value: true,
 	description: 'Build the test suite')
-option('docs', type: 'boolean', value: true,
-	description: 'Build the documentation')
+option('benchmark', type: 'boolean', value: false,
+	description: 'Build the benchmark')
